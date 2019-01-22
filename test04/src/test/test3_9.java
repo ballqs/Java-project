@@ -20,7 +20,7 @@ public class test3_9 {
 	                      j--;
 	                      break;
 	                     }
-	                 }                    
+	                 } 
 
 	                 }
 	             }
@@ -33,7 +33,6 @@ public class test3_9 {
 			}
 			System.out.println();
 		}
-
 	}
-
 }
+
