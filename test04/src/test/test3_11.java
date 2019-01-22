@@ -1,5 +1,6 @@
 package test;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
@@ -9,15 +10,17 @@ class test3__11{
 	public int avg(String[] args) {
 		int avg=0;
 		for(int i=0; i<args.length; i++) {
-			avg += Integer.parseInt(args[i])/args.length;
+			avg += Integer.parseInt(args[i]);
 		}
+		avg = avg/args.length;
 		return avg;
 	}
 	public int avg2(String[] args) {
 		int avg2=0;
 		for(int i=0; i<args.length; i++) {
-			avg2 += Integer.parseInt(args[i])%args.length;
+			avg2 += Integer.parseInt(args[i]);
 		}
+		avg2 = avg2%args.length;
 		return avg2;
 	}
 }
