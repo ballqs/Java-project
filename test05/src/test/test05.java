@@ -108,6 +108,7 @@ public class test05 {
 						System.out.print(S.Rating[i]+" ");
 					}
 					System.out.println();
+					System.out.print("이름>>");
 					S.setname(sc.next());
 					S.cancel();
 				}else if(num==2) {
@@ -115,15 +116,17 @@ public class test05 {
 						System.out.print(A.Rating[i]+" ");
 					}
 					System.out.println();
-					S.setname(sc.next());
-					S.cancel();
+					System.out.print("이름>>");
+					A.setname(sc.next());
+					A.cancel();
 				}else if(num==3) {
 					for(int i=0; i<B.Rating.length; i++) {
 						System.out.print(B.Rating[i]+" ");
 					}
 					System.out.println();
-					S.setname(sc.next());
-					S.cancel();
+					System.out.print("이름>>");
+					B.setname(sc.next());
+					B.cancel();
 				}
 			}else if(num==4) {
 				System.out.println("오늘 서비스는 여기까지입니다.");
