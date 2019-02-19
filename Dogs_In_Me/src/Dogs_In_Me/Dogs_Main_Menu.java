@@ -28,9 +28,7 @@ public class Dogs_Main_Menu extends JFrame implements ActionListener {
 		setSize(300,400);
 		
 		Container c = getContentPane();
-		
 		c.setBackground(Color.WHITE);
-		
 		bt1 = new JButton("종류");
 		bt1.addActionListener(this);
 		bt2 = new JButton("음식 및 사료");
