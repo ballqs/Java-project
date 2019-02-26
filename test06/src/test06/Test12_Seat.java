@@ -28,13 +28,6 @@ public class Test12_Seat {
 			}
 		}
 	}
-	public void PartialLookup(String seat) {
-		System.out.print(seat+">> ");
-		for(int i=0; i<this.seat.length; i++) {
-			System.out.print(this.seat[i]+" ");
-		}
-		System.out.println();
-	}
 	public void VIEW(String seat) {//ÁÂ¼®
 		System.out.print(seat+">> ");
 		for(int i=0; i<this.seat.length; i++) {

@@ -91,7 +91,7 @@ public class Test12_System {
 	}
 	public void cancelSubsystem() {
 		num--;
-		Seat[num].PartialLookup(Rank[num]);
+		Seat[num].VIEW(Rank[num]);
 		System.out.print("ÀÌ¸§>>");
 		name = sc.next();
 		Seat[num].SeatCancel(name);

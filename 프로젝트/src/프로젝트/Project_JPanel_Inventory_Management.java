@@ -7,6 +7,8 @@ import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Insets;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.Calendar;
 
 import javax.swing.JButton;
@@ -19,8 +21,9 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
-public class Project_JPanel_Inventory_Management extends JPanel{
+public class Project_JPanel_Inventory_Management extends JPanel implements MouseListener{
 	JPanel p1,p2,p2_1,p2_2,p3;
 	String []material = {"³¯Â¥","¿øµÎ","¿ìÀ¯","½Ã·´","µþ±â","¸Á°í","³ìÂ÷","È«Â÷","ÃÊÄÚ"};
     String [][]material_count = new String[0][9];
@@ -74,7 +77,7 @@ public class Project_JPanel_Inventory_Management extends JPanel{
 		for(int i = 0; i < materialbutton.length; i++) {
 			materialbutton[i] = new JButton(material[i+1]);
 			materialbutton[i].setPreferredSize(new Dimension(80,100));
-//			materialbutton[i].addMouseListener(l);
+			materialbutton[i].addMouseListener(this);
 			materialbutton[i].setBorder(new RoundedBorder(20));
 			materialbutton[i].setBounds(10,40,50,20);
 			p2_2.add(materialbutton[i]);
@@ -108,6 +111,32 @@ public class Project_JPanel_Inventory_Management extends JPanel{
 		p3.add(imview_sales);
 		p3.add(imreset);
 		return p3;
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if(e.getSource()==materialbutton[0]) {
+			m.insertRow(material_count.length, new Object[] {datelabel2.getText(),number_of_materials.getText()});
+			
+		}
+		if(e.getSource()==materialbutton[1]) {
+			m.setValueAt(number_of_materials.getText(),imtable.getRowCount()-1,0);
+			m.setValueAt(number_of_materials.getText(),imtable.getRowCount()-1,1);
+//			imtable.repaint();
+//			imtable.setModel(model);
+		}
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
 	}
 }
 class RoundedBorder implements Border {
