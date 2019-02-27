@@ -12,7 +12,7 @@ public class Project_JFrame_Inventory_Management extends JFrame{
 	GridBagConstraints gbc;
 	public Project_JFrame_Inventory_Management() {
 		setTitle("재고 관리");
-		setSize(700,500);
+		setSize(900,500);
 		gbl = new GridBagLayout();
 		setLayout(gbl);
 		gbc = new GridBagConstraints(); //☆GridBagLayout에 배치할 컴포넌트 위치 정보 등을 담을 객체 준비
